@@ -1,0 +1,24 @@
+SET BCDIR=D:\BC
+
+SET INCLUDE=%BCDIR%\INCLUDE
+SET LIB=%BCDIR%\LIB
+SET PATH=%BCDIR%\BIN;%PATH%
+cls
+
+
+
+
+bcc +LCD.CFG -I%INCLUDE% -L%LIB% -c d:DEBUG.C
+bcc +LCD.CFG -I%INCLUDE% -L%LIB% -c d:DRAM.C
+bcc +LCD.CFG -I%INCLUDE% -L%LIB% -c d:KEYB.C
+bcc +LCD.CFG -I%INCLUDE% -L%LIB% -c d:MENU.C
+bcc +LCD.CFG -I%INCLUDE% -L%LIB% -c d:TESTER.C
+bcc +LCD.CFG -I%INCLUDE% -L%LIB% -c d:TEXT.C
+bcc +LCD.CFG -I%INCLUDE% -L%LIB% -c d:TFT9163.C
+bcc +LCD.CFG -I%INCLUDE% -L%LIB% -c d:UTIL.C
+bcc +LCD.CFG -I%INCLUDE% -L%LIB% -c d:MAIN.C
+
+tlink /v/x/c/P-/L%LIB% @link.txt
+
+del *.obj
+

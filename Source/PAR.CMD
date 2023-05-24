@@ -1,0 +1,17 @@
+--pass1
+-q \
+--chip=18F452 \
+-P \
+--runtime=default,+clear,+init,-keep,-download,+stackwarn,-config,+clib,-plib \
+--opt=default,+asm,-speed,+space,9 \
+--warn=0 -Blarge \
+--double=24 \
+--cp=16 -g \
+--asmlist
+--cr=main.crf
+--echo
+--outdir=.\out
+--errformat="Error   [%n] %f; %l.%c, %s"
+--msgformat="Advisory[%n] %s"
+--warnformat="Warning [%n] %f; %l.%c, %s"
+MAIN.C DELAY.C KEYB.C SPI.C TESTER.C TEXT.C TFT9163.C UTIL.C DRAM.C MENU.C

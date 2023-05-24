@@ -1,0 +1,11 @@
+c0s.obj+
+keyb.obj+
+menu.obj+
+main.obj+
+tft9163.obj+
+text.obj+
+tester.obj+
+dram.obj+
+util.obj
+lcd,lcd
+cs.lib
